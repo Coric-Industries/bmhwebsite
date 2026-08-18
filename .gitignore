@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# SWA CLI / Azure
+.azure/
+swa-cli.config.json.local
+*.deployment-token
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
