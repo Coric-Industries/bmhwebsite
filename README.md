@@ -4,13 +4,17 @@ A single-page static site that replaces the Shopify-hosted `bmhinc.com` storefro
 It announces that **BMH Equipment is now Coric Equipment** and routes every link to the
 appropriate page on `coricind.com`. Built to be hosted on **Azure Static Web Apps**.
 
-Same *approach* as the `allstatewebsite` repo (allstateequipment.com → coricind.com), but the
-design keeps **BMH's own look and feel**, sampled from the live Shopify site (Warehouse theme):
-navy header `#163356` with the white BMH outline logo, dark red accents `#a2090d`, warm
-off-white background `#f7f4f2`, light footer, and the Source Sans Pro typeface (loaded from
-Google Fonts as "Source Sans 3"). The layout is a lightly modernized single page: announcement
-strip → navy masthead → nav bar → rebrand hero → six banner-style link tiles → the four
-value-prop items from the old homepage → light footer.
+Same *approach* as the `allstatewebsite` repo (allstateequipment.com → coricind.com). The
+layout follows **Marketing's mockup** ("BMH rebrand landing page_no photo.jpg", Aug 2026):
+navy top bar (`#1B3254`) with the white BMH logo, transition tagline, and Coric's phone
+866.678.0326 → white nav (6 items) → full-height navy hero with red conveyor line-art,
+the "After 80+ years…" rebrand copy, and an orange `#E83D2B` VISIT CORIC button →
+"Family of Companies" logo strip on `#585D7A` → white footer with a LinkedIn icon.
+
+**Interim assets:** the hero line-art (`hero-lineart-band.png`) and the logo strip
+(`family-of-companies.png`) were cropped out of the mockup JPG as stand-ins — swap them
+for the real source files when marketing delivers them. The typeface is Poppins (Google
+Fonts) as a stand-in for the mockup's geometric sans; confirm the actual brand font.
 
 ## What's here
 
@@ -19,11 +23,14 @@ src/                                 <- the deployable site (app root)
   index.html                         <- the landing page (self-contained HTML + CSS)
   staticwebapp.config.json           <- Azure SWA routing/headers config
   images/
-    bmh-logo-white.png               <- white BMH logo for the navy header (from the Shopify CDN)
+    bmh-logo-white.png               <- white BMH logo for the navy top bar (from the Shopify CDN)
     bmh-logo-navy.png                <- navy BMH logo (og:image / spare)
-    coric-logo.svg                   <- Coric logo (from coricind.com/brand/coric-logo.svg, spare)
+    coric-logo.svg                   <- Coric logo (spare)
+    hero-lineart-band.png            <- INTERIM: cropped from the marketing mockup
+    family-of-companies.png          <- INTERIM: cropped from the marketing mockup
     favicon-96x96.png                <- favicon (same one the Shopify site uses)
-.github/workflows/azure-static-web-apps.yml   <- CI/CD for the GitHub-based deploy path
+.github/workflows/azure-static-web-apps.yml   <- Azure SWA deploy (currently disabled on GitHub)
+.github/workflows/github-pages.yml            <- GitHub Pages test deploy
 ```
 
 `staticwebapp.config.json` rewrites all unknown paths (e.g. old Shopify deep links like
