@@ -17,12 +17,10 @@
 
 <link rel="shortcut icon" type="image/png" href="images/favicon-96x96.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Poppins is a stand-in for the mockup's geometric sans until marketing supplies the brand font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
+@font-face{font-family:"Gravita GEO";src:url('fonts/GravitaGEO-Regular.otf') format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Gravita GEO";src:url('fonts/GravitaGEO-Medium.otf') format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Gravita GEO";src:url('fonts/GravitaGEO-Bold.otf') format("opentype");font-weight:600 700;font-style:normal;font-display:swap}
 :root{
   --navy:#1B3254;
   --red:#E83D2B;
@@ -30,7 +28,7 @@
   --ink:#1B3254;
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:"Poppins","Century Gothic",Futura,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.55}
+body{margin:0;font-family:"Gravita GEO","Century Gothic",Futura,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.55}
 
 /* top bar */
 .topbar{background:var(--navy);color:#fff}
@@ -47,8 +45,9 @@ body{margin:0;font-family:"Poppins","Century Gothic",Futura,-apple-system,"Segoe
 .navbar a:hover{color:var(--red)}
 
 /* hero */
-.hero{background:var(--navy) url('images/hero-lineart-band.png') bottom center/100% auto no-repeat;color:#fff;padding:220px 40px 480px}
-.hero .inner{max-width:1300px;margin:0 auto}
+.hero{background:var(--navy);color:#fff;padding:220px 40px 480px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url('images/warehouse-lineart.png') center 55%/cover no-repeat;opacity:.45}
+.hero .inner{max-width:1300px;margin:0 auto;position:relative}
 .hero h1{margin:0 0 40px;font-size:76px;line-height:1.05;font-weight:600}
 .hero p{margin:0;max-width:1240px;font-size:24px;font-weight:400;line-height:1.55}
 .hero .cta{text-align:center;margin-top:120px}

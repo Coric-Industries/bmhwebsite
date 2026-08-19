@@ -11,13 +11,12 @@ navy top bar (`#1B3254`) with the white BMH logo, transition tagline, and Coric'
 the "After 80+ years…" rebrand copy, and an orange `#E83D2B` VISIT CORIC button →
 "Family of Companies" logo strip on `#585D7A` → white footer with a LinkedIn icon.
 
-**Assets:** the ten Family of Companies logos are marketing's real files (from the
-`OneDrive_1_8-18-2026` delivery, "for web" AVIFs + the NCLT SVG). Still interim:
-`hero-lineart-band.png` (cropped from the mockup JPG — marketing's source is an .ai file;
-ask for an SVG/PNG export of "Warehouse conveyer belt illustration.ai") and
-`logo-american-storage-white.png` (cropped from the mockup; the delivered white version
-is a PSD). The typeface is Poppins (Google Fonts) as a stand-in for the mockup's
-geometric sans; confirm the actual brand font.
+**Assets:** all real marketing files now (delivery in `Downloads/OneDrive_1_8-18-2026`).
+The ten Family of Companies logos are the "for web" AVIFs + the NCLT SVG; the hero
+illustration is marketing's PNG export of "Warehouse conveyer belt illustration"
+(downscaled from 10834px to 2400px wide, shown at 45% opacity over the navy to match
+the mockup treatment); the brand font is **Gravita GEO** (Regular/Medium/Bold OTFs
+self-hosted in `src/fonts/` — no external font dependency remains).
 
 ## What's here
 
