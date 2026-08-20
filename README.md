@@ -31,9 +31,12 @@ src/                                 <- the deployable site (app root)
     hero-lineart-band.png            <- INTERIM: cropped from the marketing mockup
     family-of-companies.png          <- INTERIM: cropped from the marketing mockup
     favicon-96x96.png                <- favicon (same one the Shopify site uses)
-.github/workflows/azure-static-web-apps.yml   <- Azure SWA deploy (currently disabled on GitHub)
-.github/workflows/github-pages.yml            <- GitHub Pages test deploy
+.github/workflows/azure-static-web-apps.yml   <- Azure SWA deploy (push to main = deploy)
 ```
+
+**Production:** live at https://bmhinc.com / https://www.bmhinc.com on Azure SWA
+`swa-bmh-web` (rg-bmh-web, Free tier). DNS on Cloudflare. The GitHub Pages test
+deployment was retired after cutover (Aug 2026); Shopify cancelled.
 
 `staticwebapp.config.json` rewrites all unknown paths (e.g. old Shopify deep links like
 `/collections/pallet-rack` or `/products/...`) to the landing page, so no inbound link 404s.
